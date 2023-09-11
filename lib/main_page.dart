@@ -1,28 +1,7 @@
 import 'package:flutter/material.dart';
 
-void main() {
-  runApp(const MyApp());
-}
-
-class MyApp extends StatelessWidget {
-  const MyApp({super.key});
-
-  // This widget is the root of your application.
-  @override
-  Widget build(BuildContext context) {
-    return MaterialApp(
-      title: 'Physics App',
-      theme: ThemeData(
-        colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepPurple),
-        useMaterial3: true,
-      ),
-      home: const TopPage(title: 'Top Page'),
-    );
-  }
-}
-
-class TopPage extends StatefulWidget {
-  const TopPage({
+class MainPage extends StatefulWidget {
+  const MainPage({
     Key? key,
     required this.title,
   }) : super(key: key);
@@ -30,10 +9,10 @@ class TopPage extends StatefulWidget {
   final String title;
 
   @override
-  State<TopPage> createState() => _TopPageState();
+  State<MainPage> createState() => _MainPageState();
 }
 
-class _TopPageState extends State<TopPage> {
+class _MainPageState extends State<MainPage> {
   int _selectedIndex = 0;
 
   void _onItemTapped(int index) {
